@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/w3css.css">
+  <link rel="stylesheet" href="assets/fonts/appicons/Glyphter.css">
+  <link rel="stylesheet" href="assets/fonts/vehicle-font/daizo.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+  rel = "stylesheet">
+</head>
+<body>
+	<div id="wrapper">
+		<nav class="navbar navbar-inverse res-navbar navbar-fixed-top">
+			<div class="">
+				<ul class="nav navbar-nav navbar" id="main">
+					<li class="res-logo"><img src="assets/icons/daizo_logo.png" class="res-img"></li>
+					<li class="res-cycle"><i class="icon-bicycle"></i></li>
+					<li><a href="#" id="menu-toggle" onclick="navValidation()"><img src="assets/icons/toggle.png"></a></li>
+					
+				</ul>
+				<div class="align-right">
+					<ul class="nav navbar-nav res-right">
+						<li>
+							<ul class="nav navbar-nav navbar">
+								<li class="res-table">
+									<select class="w3-select res-select">
+										<option>Australia</option>
+										<option>New Zealand</option>
+										<option>Poland</option>
+										<option>Finland</option>
+									</select>
+								</li>
+								<li class="res-search">
+									<a href="#"><i class="icon-search"></i></a>
+								</li>
+							</ul>
+						</li>				
+						<li>
+							<ul class="nav navbar-nav align-icon">
+								<li class="res-notification"><a href="#"><i class="icon-notification"></i></a></li>
+								<li class="res-profile"><a href="#"><i class="icon-profile"></i></a></li>
+								<li class="dropdown res-dropdown">
+										<a href="#" data-toggle="dropdown">Welcome Admin <span class="caret"></span></a>
+										<ul class="dropdown-menu w3-select">
+											<li><a href="#"> User Details</a></li>
+											<li><a href="#"> Parking Details</a></li>
+											<li><a href="#"> Parking Timings</a></li>
+										</ul>
+									</li>
+								<li class="res-settings"><a href="#"><i class="icon-settings"></i></a></li>
+								<li class="res-logout"><a href="#"><i class="icon-logout"></i></a></li>
+							</ul>
+						</li>										
+					</ul>
+				</div>
+			</div>
+		</nav>
+	
+		<div id="sidebar-wrapper" class="opa-0">
+				<ul class="sidebar-nav">
+					<li class="res-dashboard">
+						<i class="icon-dashboard"></i>
+						<a href="#">Dashboard</a>
+					</li>
+					<li>
+						<i class="icon-parking-management"></i>
+						<a href="#">Parking Management</a>
+					</li>
+					<li>
+						<i class="icon-parking-maintenance"></i>
+						<a href="#">Parking Maintenance</a>
+					</li>
+					<li>
+						<i class="icon-user-management"></i>
+						<a href="#">User Management</a>
+					</li>
+					<li>
+						<i class="icon-application-management"></i>
+						<a href="#">Application Management</a>
+					</li>
+				</ul>
+		</div>
+	
+	</div>
+
+	<div class="page-content" id="content">
+		<div class="col-lg-12">
+			<div class="col-md-12 ">
+				<div class="res-header">
+					<i class="icon-parking-details"></i>
+					<span>Parking Maintenance</span>
+				</div>
+			</div>
+			<div class="col-md-12">
+			
+				<div class="panel">
+					<table class="table">
+						<tbody>
+							<tr class="res-tr">
+								<td>
+									<div class="input-group">
+										<select class="w3-select">
+											<option>Maintenance Type</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="input-group">
+										<input type="text" class="w3-input " placeholder="Maintenance Part Name">
+										
+									</div>
+								</td>
+								
+								<td style="width: 28%;">
+									<div class="input-group res_pos">
+											<input type="text" class="w3-input from_date" placeholder="Last Maintenance Date" id="from"> 
+											<span style="margin-top:2% ;"><i class="fa fa-calendar"></i></i></span>
+											<input type="text" class="w3-input to_date" placeholder="Next Due Date" id="to"> 
+											<span style="margin-top:2% ;"><i class="fa fa-calendar"></i></span>
+											
+									</div>
+								</td>
+								<td>
+										<div class="input-group">
+											<input type="text" class="w3-input" placeholder="Part Code">
+										</div>
+									</td>	
+									
+							</tr>
+							<tr class="res-tr">
+									
+								<td colspan="2">
+									<div class="input-group">
+											<input type="text"  class="w3-input" placeholder="Remarks" >
+									</div>
+								</td>
+							</tr>
+							<tr class="res-tr">
+								<td></td>
+								<td></td>
+								
+								<td>
+									<button class="btn btn-primary">Update</button>
+								</td>
+								<td></td>
+								<td></td>
+								</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="col-md-12">
+			<div class="panel">
+				<div class="container">
+					<div class="row">
+						<div class="Header-text">
+							<span><b>Parking Name</b></span>
+						</div>
+						
+						<div class="input-group header">
+							<select class="w3-select">
+								<option>Maintenance Type</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+						</div>
+					
+					</div>
+				</div>
+
+				<div class="container">
+					<table id="example" class="table" style="width:100%">
+							<thead>
+								<tr>
+									<th>S.No</th>
+									<th>Select</th>
+									<th>Maintenance Type</th>
+									<th>Maintenance part</th>
+									<th>Last Maintenance Date</th>
+									<th>Next Maintenance Due Date</th>
+									<th>Remarks</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td><input type="checkbox"></td>
+									<td>General</td>
+									<td>UPS</td>
+									<td>10/12/2019</td>
+									<td>11/12/2019</td>
+									<td>Good</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td><input type="checkbox"></td>
+									<td>General</td>
+									<td>UPS</td>
+									<td>10/12/2019</td>
+									<td>11/12/2019</td>
+									<td>Good</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td><input type="checkbox"></td>
+									<td>General</td>
+									<td>UPS</td>
+									<td>10/12/2019</td>
+									<td>11/12/2019</td>
+									<td>Good</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td><input type="checkbox"></td>
+									<td>General</td>
+									<td>UPS</td>
+									<td>10/12/2019</td>
+									<td>11/12/2019</td>
+									<td>Good</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td><input type="checkbox"></td>
+									<td>General</td>
+									<td>UPS</td>
+									<td>10/12/2019</td>
+									<td>11/12/2019</td>
+									<td>Good</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td><input type="checkbox"></td>
+									<td>General</td>
+									<td>UPS</td>
+									<td>10/12/2019</td>
+									<td>11/12/2019</td>
+									<td>Good</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td><input type="checkbox"></td>
+									<td>General</td>
+									<td>UPS</td>
+									<td>10/12/2019</td>
+									<td>11/12/2019</td>
+									<td>Good</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td><input type="checkbox"></td>
+									<td>General</td>
+									<td>UPS</td>
+									<td>10/12/2019</td>
+									<td>11/12/2019</td>
+									<td>Good</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td><input type="checkbox"></td>
+									<td>General</td>
+									<td>UPS</td>
+									<td>10/12/2019</td>
+									<td>11/12/2019</td>
+									<td>Good</td>
+								</tr>
+
+								<tr>
+									<td>1</td>
+									<td><input type="checkbox"></td>
+									<td>General</td>
+									<td>UPS</td>
+									<td>10/12/2019</td>
+									<td>11/12/2019</td>
+									<td>Good</td>
+								</tr><tr>
+									<td>1</td>
+									<td><input type="checkbox"></td>
+									<td>General</td>
+									<td>UPS</td>
+									<td>10/12/2019</td>
+									<td>11/12/2019</td>
+									<td>Good</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td><input type="checkbox"></td>
+									<td>General</td>
+									<td>UPS</td>
+									<td>10/12/2019</td>
+									<td>11/12/2019</td>
+									<td>Good</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td><input type="checkbox"></td>
+									<td>General</td>
+									<td>UPS</td>
+									<td>10/12/2019</td>
+									<td>11/12/2019</td>
+									<td>Good</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td><input type="checkbox"></td>
+									<td>General</td>
+									<td>UPS</td>
+									<td>10/12/2019</td>
+									<td>11/12/2019</td>
+									<td>Good</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td><input type="checkbox"></td>
+									<td>General</td>
+									<td>UPS</td>
+									<td>10/12/2019</td>
+									<td>11/12/2019</td>
+									<td>Good</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td><input type="checkbox"></td>
+									<td>General</td>
+									<td>UPS</td>
+									<td>10/12/2019</td>
+									<td>11/12/2019</td>
+									<td>Good</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td><input type="checkbox"></td>
+									<td>General</td>
+									<td>UPS</td>
+									<td>10/12/2019</td>
+									<td>11/12/2019</td>
+									<td>Good</td>
+								</tr>
+							</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>	
+
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+	<script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script>
+	<script src="assets/js/parking.js"></script>
+</body>
+</html>

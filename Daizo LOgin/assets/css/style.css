@@ -1,0 +1,147 @@
+.version_text{ bottom: -180px; position: absolute;  }
+.login_logo{
+  position: absolute;
+  top: 3%;
+  left: -11%;
+}
+.login_align{
+  width: 70%;
+}
+.input-group {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+}
+input {
+  outline: none;
+  margin: 0;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  font-size: 14px;
+  font-family: inherit;
+  background: transparent;
+  width: 94%;
+}
+h2,h3{
+  color: white !important;
+}
+.bg_img{
+    width: 100%;
+    height: 768px;
+}
+.Textover{
+    margin-top: -12%;
+    padding: 1.5% 14% 2% 4%;
+    position: absolute;
+    color: #999;
+    height: 60px;
+    background-color: rgba(0,0,0,.25);
+}
+.row{
+  
+  margin-right: unset !important;
+}
+.col-md-6{
+       padding-right: unset !important; 
+     padding-left: unset !important;
+}
+.container-fluid{
+  position: absolute;
+    top: 4%;
+    left: 9%;
+    width: 80%;
+}
+.glyphicon {
+  background: transparent;
+  color: white;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: unset !important;
+}
+.btn-primary {
+  color: #151515 !important;
+  background-color: #f4f6f7 !important;
+  border-color: #f5f6f7 !important;
+  width: 100%;
+  border-radius: unset !important;
+  font-weight: bold !important;
+}
+.checkboxSize{
+  position: absolute;
+  margin-top: 4px\9;
+  margin-left: -66px !important;
+}
+.res-sign{
+  margin-top: 27%;
+    margin-bottom: 5%;
+}
+.res-pw{
+  margin-top: 20%;
+}
+.res-footer{
+  margin-top: -12%;
+  padding: 3.5% 0% 2% 11%;
+  position: absolute;
+  color: #999;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(0,0,0,.25);
+  font-size: x-small;
+}
+.res-privacy{
+  position:absolute;
+  left: 86%;
+}
+::placeholder {
+  color:white;
+  opacity: 1; /* Firefox */
+}
+.checkbox-inline, .radio-inline {
+  color: white;
+}
+.copyright-mark{
+  color: #999999 !important;
+}
+.lock{
+ color: #bc7b04;
+}
+.lock:hover{
+  color: #bc7b04;
+ }
+ .res-select{
+  padding: 0px 0px 0px 0px !important;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: #222222;
+  color: #979797;
+}
+@media only screen and ( max-width:767px){
+  .login_logo{
+    display: none;
+  }
+  .left_align{
+    display: none;
+  }
+  tr{
+    display: grid;
+  }
+  .container-fluid {
+    position: absolute;
+    top: 4%;
+    left: 9%;
+    width: 86%;
+}
+.bg_img {
+  width: 100%;
+  height: 639px;
+}
+.res-footer{
+  display: none;
+}
+}
